@@ -1,0 +1,6 @@
+framework module Pods_WiproProficiencyExerciseTests {
+  umbrella header "Pods-WiproProficiencyExerciseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
