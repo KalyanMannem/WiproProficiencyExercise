@@ -13,6 +13,7 @@
 		89A09B8823A21E5B007BD73D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A09B8623A21E5B007BD73D /* LaunchScreen.storyboard */; };
 		89A09B9323A21E5B007BD73D /* WiproProficiencyExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A09B9223A21E5B007BD73D /* WiproProficiencyExerciseTests.swift */; };
 		89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196D823A22DFD00EAC10B /* AppConstants.swift */; };
+		89B196DB23A2301700EAC10B /* CanadaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196DA23A2301700EAC10B /* CanadaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		89A09B9223A21E5B007BD73D /* WiproProficiencyExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproProficiencyExerciseTests.swift; sourceTree = "<group>"; };
 		89A09B9423A21E5B007BD73D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89B196D823A22DFD00EAC10B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		89B196DA23A2301700EAC10B /* CanadaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		89B196D523A22B5600EAC10B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89B196DA23A2301700EAC10B /* CanadaModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A09B8023A21E55007BD73D /* ViewController.swift in Sources */,
+				89B196DB23A2301700EAC10B /* CanadaModel.swift in Sources */,
 				89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */,
 				89A09B7C23A21E55007BD73D /* AppDelegate.swift in Sources */,
 			);
