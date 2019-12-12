@@ -10,14 +10,12 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class RowTableViewCell: UITableViewCell
-{
+class RowTableViewCell: UITableViewCell{
     var item : Row? {
         didSet {
             rowTitleLabel.text = item?.title
             rowDescriptionLabel.text = item?.rowDescription
-            if let  imageUrl = URL(string: item?.imageHref ?? "")
-            {
+            if let  imageUrl = URL(string: item?.imageHref ?? ""){
                 rowImage.kf.indicatorType = .activity
                 rowImage.kf.setImage(
                     with: imageUrl,
@@ -27,22 +25,20 @@ class RowTableViewCell: UITableViewCell
                         .transition(.fade(1)),
                         .cacheOriginalImage
                 ])
-            }
-            else
-            {
+            }else{
                 rowImage.image = nil
             }
         }
     }
     
-    private let rowTitleLabel : UILabel = {
+    private let rowTitleLabel: UILabel = {
         let lbl = UILabel()
         if #available(iOS 13.0, *) {
             lbl.textColor = .label
         } else {
             // Fallback on earlier versions
             lbl.textColor = .darkText
-
+            
         }
         lbl.font = UIFont.preferredFont(forTextStyle: .headline)
         lbl.textAlignment = .left
@@ -50,14 +46,11 @@ class RowTableViewCell: UITableViewCell
     }()
     
     
-    private let rowDescriptionLabel : UILabel = {
+    private let rowDescriptionLabel: UILabel = {
         let lbl = UILabel()
-        if #available(iOS 13.0, *)
-        {
+        if #available(iOS 13.0, *){
             lbl.textColor = .label
-        }
-        else
-        {
+        }else{
             // Fallback on earlier versions
             lbl.textColor = .darkText
         }
@@ -67,23 +60,19 @@ class RowTableViewCell: UITableViewCell
         return lbl
     }()
     
-    private let rowImage : ScaleAspectFitImageView = {
+    private let rowImage: ScaleAspectFitImageView = {
         let imgView = ScaleAspectFitImageView()
         imgView.contentMode = .scaleAspectFill
         imgView.clipsToBounds = true
         return imgView
     }()
- 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-  
         self.selectionStyle = .none
-        if #available(iOS 13.0, *)
-        {
+        if #available(iOS 13.0, *){
             self.backgroundColor = .systemBackground
-        }
-        else
-        {
+        }else{
             // Fallback on earlier versions
             self.backgroundColor = .white
         }

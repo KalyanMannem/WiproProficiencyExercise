@@ -12,8 +12,7 @@ import UIKit
 extension UIViewController
 {
     // Stops Loading
-    func stopLoading()
-    {
+    func stopLoading(){
         let someview = self.view.viewWithTag(999)
         UIView.animate(withDuration: 0, delay: 0, options: .transitionFlipFromTop , animations: {
             someview?.layer.opacity = 0.01
@@ -24,8 +23,7 @@ extension UIViewController
     }
     
     // Shows Loading
-    func startLoading()
-    {
+    func startLoading(){
         let loadingView = UIView()
         loadingView.tag = 999
         loadingView.layer.cornerRadius = 10.0
@@ -54,17 +52,14 @@ extension UIViewController
     }
 }
 
-extension UIViewController
-{
-    func showAlert(with title:String, message:String)
-    {
+extension UIViewController{
+    func showAlert(with title:String, message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
     }
 }
 
-class ScaledHeightImageView: UIImageView
-{
+class ScaledHeightImageView: UIImageView{
 
     override var intrinsicContentSize: CGSize {
 
@@ -83,31 +78,26 @@ class ScaledHeightImageView: UIImageView
 
 }
 
-public class ScaleAspectFitImageView : UIImageView
-{
+public class ScaleAspectFitImageView : UIImageView{
     // constraint to maintain same aspect ratio as the image
     private var aspectRatioConstraint:NSLayoutConstraint? = nil
     
-    required public init?(coder aDecoder: NSCoder)
-    {
+    required public init?(coder aDecoder: NSCoder){
         super.init(coder:aDecoder)
         self.setup()
     }
     
-    public override init(frame:CGRect)
-    {
+    public override init(frame:CGRect){
         super.init(frame:frame)
         self.setup()
     }
     
-    public override init(image: UIImage!)
-    {
+    public override init(image: UIImage!){
         super.init(image:image)
         self.setup()
     }
     
-    public override init(image: UIImage!, highlightedImage: UIImage?)
-    {
+    public override init(image: UIImage!, highlightedImage: UIImage?){
         super.init(image:image,highlightedImage:highlightedImage)
         self.setup()
     }
@@ -118,23 +108,20 @@ public class ScaleAspectFitImageView : UIImageView
         }
     }
     
-    private func setup()
-    {
+    private func setup(){
         self.contentMode = .scaleAspectFit
         self.updateAspectRatioConstraint()
     }
     
     /// Removes any pre-existing aspect ratio constraint, and adds a new one based on the current image
-    private func updateAspectRatioConstraint()
-    {
+    private func updateAspectRatioConstraint(){
         // remove any existing aspect ratio constraint
         if let c = self.aspectRatioConstraint {
             self.removeConstraint(c)
         }
         self.aspectRatioConstraint = nil
         
-        if let imageSize = image?.size, imageSize.height != 0
-        {
+        if let imageSize = image?.size, imageSize.height != 0{
             let aspectRatio = imageSize.width / imageSize.height
             let c = NSLayoutConstraint(item: self, attribute: .width,
                                        relatedBy: .equal,

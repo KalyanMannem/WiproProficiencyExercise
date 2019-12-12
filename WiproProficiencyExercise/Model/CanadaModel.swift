@@ -8,14 +8,12 @@
 
 import Foundation
 
-struct CanadaDataModel: Codable
-{
+struct CanadaDataModel: Codable{
     let title: String
     let rows: [Row]
 }
 
-struct Row: Codable
-{
+struct Row: Codable{
     let title, rowDescription: String?
     let imageHref: String?
 

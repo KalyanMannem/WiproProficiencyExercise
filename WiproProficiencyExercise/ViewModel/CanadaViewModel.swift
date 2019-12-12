@@ -8,20 +8,10 @@
 
 import Foundation
 
-class CanadaViewModel: NSObject
-{
-    var dataModel: CanadaDataModel!
-    func getCanadaDetails(url : String, completion: @escaping (Result<CanadaDataModel,APIServiceError>) -> ())
-    {
-        APIClient().getDataFrom(for: CanadaDataModel.self, url: url) {[weak self](result) in
-            switch result
-            {
-            case .success(let data):
-                self?.dataModel = data
-                completion(.success(self!.dataModel))
-            case .failure(let error):
-                print(error)
-            }
+class CanadaViewModel{
+    func getCanadaDetails(url : String, completion: @escaping (Result<CanadaDataModel,APIServiceError>) -> ()){
+        APIClient().getDataFrom(for: CanadaDataModel.self, url: url) {(result) in
+         completion(result)
         }
     }
 }

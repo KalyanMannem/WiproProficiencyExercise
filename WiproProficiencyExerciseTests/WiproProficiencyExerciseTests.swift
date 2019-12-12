@@ -11,6 +11,7 @@ import XCTest
 
 class WiproProficiencyExerciseTests: XCTestCase {
 
+    let viewModel = CanadaViewModel()
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -22,6 +23,21 @@ class WiproProficiencyExerciseTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    func testAPIWorking()
+    {
+
+        let expectation = XCTestExpectation.init(description: "Wait for api")
+
+        viewModel.getCanadaDetails(url: AppConstants.SERVICE_URL) { (result) in
+            switch result {
+            case .success( _):
+                expectation.fulfill()
+            case .failure( _):
+                XCTFail("failed")
+            }
+        }
+        self.wait(for: [expectation], timeout: 20)
     }
 
     func testPerformanceExample() {
