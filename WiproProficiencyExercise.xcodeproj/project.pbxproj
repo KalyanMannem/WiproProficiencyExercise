@@ -14,6 +14,8 @@
 		89A09B9323A21E5B007BD73D /* WiproProficiencyExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A09B9223A21E5B007BD73D /* WiproProficiencyExerciseTests.swift */; };
 		89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196D823A22DFD00EAC10B /* AppConstants.swift */; };
 		89B196DB23A2301700EAC10B /* CanadaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196DA23A2301700EAC10B /* CanadaModel.swift */; };
+		89B196DD23A2433700EAC10B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196DC23A2433700EAC10B /* APIClient.swift */; };
+		89B196DF23A2438900EAC10B /* CanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196DE23A2438900EAC10B /* CanadaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		89A09B9423A21E5B007BD73D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89B196D823A22DFD00EAC10B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		89B196DA23A2301700EAC10B /* CanadaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaModel.swift; sourceTree = "<group>"; };
+		89B196DC23A2433700EAC10B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		89B196DE23A2438900EAC10B /* CanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		89B196D423A22B1F00EAC10B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				89B196DE23A2438900EAC10B /* CanadaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				89B196D823A22DFD00EAC10B /* AppConstants.swift */,
+				89B196DC23A2433700EAC10B /* APIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 				89A09B8023A21E55007BD73D /* ViewController.swift in Sources */,
 				89B196DB23A2301700EAC10B /* CanadaModel.swift in Sources */,
 				89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */,
+				89B196DD23A2433700EAC10B /* APIClient.swift in Sources */,
+				89B196DF23A2438900EAC10B /* CanadaViewModel.swift in Sources */,
 				89A09B7C23A21E55007BD73D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
