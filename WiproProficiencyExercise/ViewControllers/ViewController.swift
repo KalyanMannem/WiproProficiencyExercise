@@ -41,7 +41,6 @@ class ViewController: UIViewController
         tableView.rightAnchor.constraint(equalTo: safeGuide.rightAnchor).isActive = true
         tableView.register(RowTableViewCell.self, forCellReuseIdentifier: "ItemCell")
         tableView.addSubview(self.refreshControl)
-        tableView.isHidden = true
     }
     
     func updateTablview(){
@@ -67,7 +66,6 @@ class ViewController: UIViewController
         self.results = dataModel.rows.filter({$0.imageHref != nil || $0.title != nil || $0.rowDescription != nil  })
         self.title = dataModel.title
         self.tableView.reloadData()
-        tableView.isHidden = false
     }
     
     func getServiceData(_ isFromRefresh: Bool = false){
