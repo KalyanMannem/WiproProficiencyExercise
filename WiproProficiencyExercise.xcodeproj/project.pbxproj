@@ -12,6 +12,7 @@
 		89A09B8523A21E5A007BD73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A09B8423A21E5A007BD73D /* Assets.xcassets */; };
 		89A09B8823A21E5B007BD73D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A09B8623A21E5B007BD73D /* LaunchScreen.storyboard */; };
 		89A09B9323A21E5B007BD73D /* WiproProficiencyExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A09B9223A21E5B007BD73D /* WiproProficiencyExerciseTests.swift */; };
+		89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196D823A22DFD00EAC10B /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		89A09B8E23A21E5B007BD73D /* WiproProficiencyExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproProficiencyExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A09B9223A21E5B007BD73D /* WiproProficiencyExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproProficiencyExerciseTests.swift; sourceTree = "<group>"; };
 		89A09B9423A21E5B007BD73D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B196D823A22DFD00EAC10B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		89B196D623A22B9B00EAC10B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				89B196D823A22DFD00EAC10B /* AppConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A09B8023A21E55007BD73D /* ViewController.swift in Sources */,
+				89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */,
 				89A09B7C23A21E55007BD73D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
