@@ -76,7 +76,12 @@
 			isa = PBXGroup;
 			children = (
 				89A09B7B23A21E55007BD73D /* AppDelegate.swift */,
-				89A09B7F23A21E55007BD73D /* ViewController.swift */,
+				89B196D223A22ACA00EAC10B /* ViewControllers */,
+				89B196D723A22BCB00EAC10B /* Cells */,
+				89B196D523A22B5600EAC10B /* Model */,
+				89B196D423A22B1F00EAC10B /* ViewModel */,
+				89B196D323A22AEC00EAC10B /* Networking */,
+				89B196D623A22B9B00EAC10B /* Helpers */,
 				89A09B8423A21E5A007BD73D /* Assets.xcassets */,
 				89A09B8623A21E5B007BD73D /* LaunchScreen.storyboard */,
 				89A09B8923A21E5B007BD73D /* Info.plist */,
@@ -91,6 +96,49 @@
 				89A09B9423A21E5B007BD73D /* Info.plist */,
 			);
 			path = WiproProficiencyExerciseTests;
+			sourceTree = "<group>";
+		};
+		89B196D223A22ACA00EAC10B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				89A09B7F23A21E55007BD73D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		89B196D323A22AEC00EAC10B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		89B196D423A22B1F00EAC10B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		89B196D523A22B5600EAC10B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89B196D623A22B9B00EAC10B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		89B196D723A22BCB00EAC10B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
