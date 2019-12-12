@@ -23,7 +23,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        tableView.dataSource = self
+        updateTablview()
         getServiceData()
     }
     
@@ -36,7 +36,25 @@ class ViewController: UIViewController
         tableView.leftAnchor.constraint(equalTo: safeGuide.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: safeGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: safeGuide.rightAnchor).isActive = true
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(RowTableViewCell.self, forCellReuseIdentifier: "ItemCell")
+    }
+    
+    func updateTablview()
+    {
+        tableView.backgroundColor = .white
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        if #available(iOS 13.0, *)
+        {
+            self.view.backgroundColor = .systemBackground
+            self.tableView.backgroundColor = .systemBackground
+        }
+        else
+        {
+            // Fallback on earlier versions
+            self.view.backgroundColor = .white
+        }
     }
     
     func getServiceData()
@@ -46,12 +64,16 @@ class ViewController: UIViewController
     
     func callIngAPI(url: String)
     {
-        canadaViewModel.getCanadaDetails(url: url) {(result) in
-                if let result = try? result.get()
-                {
-                    print(result)
+        canadaViewModel.getCanadaDetails(url: url) {[weak self](result) in
+            if let result = try? result.get()
+            {
+                DispatchQueue.main.async {
+                    self?.results = result.rows.filter({$0.imageHref != nil || $0.title != nil || $0.rowDescription != nil  })
+                    self?.title = result.title
+                    self?.tableView.reloadData()
                 }
             }
+        }
     }
 
 }
@@ -65,8 +87,8 @@ extension ViewController: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = results[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! RowTableViewCell
+        cell.item = results[indexPath.row]
         return cell
     }
 }
