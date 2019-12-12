@@ -20,6 +20,7 @@
 		89B196DF23A2438900EAC10B /* CanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196DE23A2438900EAC10B /* CanadaViewModel.swift */; };
 		89B196E123A2471500EAC10B /* RowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196E023A2471500EAC10B /* RowTableViewCell.swift */; };
 		89B196E323A2480700EAC10B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196E223A2480700EAC10B /* Extensions.swift */; };
+		89B196E523A263E400EAC10B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B196E423A263E400EAC10B /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		89B196DE23A2438900EAC10B /* CanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaViewModel.swift; sourceTree = "<group>"; };
 		89B196E023A2471500EAC10B /* RowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTableViewCell.swift; sourceTree = "<group>"; };
 		89B196E223A2480700EAC10B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		89B196E423A263E400EAC10B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		DC335F69421003074B6B436A /* Pods-WiproProficiencyExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiproProficiencyExercise.release.xcconfig"; path = "Target Support Files/Pods-WiproProficiencyExercise/Pods-WiproProficiencyExercise.release.xcconfig"; sourceTree = "<group>"; };
 		DC7B3032603E37DA027225C3 /* Pods_WiproProficiencyExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiproProficiencyExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 			children = (
 				89B196D823A22DFD00EAC10B /* AppConstants.swift */,
 				89B196E223A2480700EAC10B /* Extensions.swift */,
+				89B196E423A263E400EAC10B /* Utility.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			files = (
 				89A09B8023A21E55007BD73D /* ViewController.swift in Sources */,
 				89B196DB23A2301700EAC10B /* CanadaModel.swift in Sources */,
+				89B196E523A263E400EAC10B /* Utility.swift in Sources */,
 				89B196D923A22DFD00EAC10B /* AppConstants.swift in Sources */,
 				89B196E323A2480700EAC10B /* Extensions.swift in Sources */,
 				89B196DD23A2433700EAC10B /* APIClient.swift in Sources */,

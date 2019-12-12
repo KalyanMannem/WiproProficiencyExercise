@@ -14,6 +14,12 @@ class ViewController: UIViewController
     private var results: [Row] = []
     private let canadaViewModel = CanadaViewModel()
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        return refreshControl
+    }()
+    
     override func loadView()
     {
         super.loadView()
@@ -23,6 +29,12 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+//        updateTablview()
+//        getServiceData()
+    }
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
         updateTablview()
         getServiceData()
     }
@@ -37,6 +49,7 @@ class ViewController: UIViewController
         tableView.bottomAnchor.constraint(equalTo: safeGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: safeGuide.rightAnchor).isActive = true
         tableView.register(RowTableViewCell.self, forCellReuseIdentifier: "ItemCell")
+        tableView.addSubview(self.refreshControl)
     }
     
     func updateTablview()
@@ -57,20 +70,41 @@ class ViewController: UIViewController
         }
     }
     
-    func getServiceData()
-    {
-        self.callIngAPI(url: AppConstants.SERVICE_URL)
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl){
+        getServiceData(true)
     }
     
-    func callIngAPI(url: String)
+    func getServiceData(_ isFromRefresh: Bool = false)
+    {
+        guard Utility.isConnectedtoNetwork()
+        else
+        {
+            if(isFromRefresh)
+            {
+                refreshControl.endRefreshing()
+            }
+            return
+        }
+        isFromRefresh ? refreshControl.endRefreshing() : self.startLoading()
+        self.callIngAPI(isFromRefresh: isFromRefresh, url: AppConstants.SERVICE_URL)
+    }
+    
+    func callIngAPI(isFromRefresh: Bool, url: String)
     {
         canadaViewModel.getCanadaDetails(url: url) {[weak self](result) in
-            if let result = try? result.get()
+            DispatchQueue.main.async
             {
-                DispatchQueue.main.async {
+                self!.stopLoading()
+                if(isFromRefresh)
+                {
+                    self!.refreshControl.endRefreshing()
+                }
+                if let result = try? result.get()
+                {
                     self?.results = result.rows.filter({$0.imageHref != nil || $0.title != nil || $0.rowDescription != nil  })
                     self?.title = result.title
                     self?.tableView.reloadData()
+                    self?.stopLoading()
                 }
             }
         }

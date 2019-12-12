@@ -23,6 +23,7 @@ public class APIClient
     public func getDataFrom<T:Decodable>(for: T.Type = T.self, url: String,
                                          completion: @escaping (Result<T,APIServiceError>) -> Void)
     {
+        print("Service Call")
         guard let url = URL(string: url)
         else
         {
