@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		89A09B7C23A21E55007BD73D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A09B7B23A21E55007BD73D /* AppDelegate.swift */; };
-		89A09B7E23A21E55007BD73D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A09B7D23A21E55007BD73D /* SceneDelegate.swift */; };
 		89A09B8023A21E55007BD73D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A09B7F23A21E55007BD73D /* ViewController.swift */; };
 		89A09B8323A21E55007BD73D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A09B8123A21E55007BD73D /* Main.storyboard */; };
 		89A09B8523A21E5A007BD73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A09B8423A21E5A007BD73D /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		89A09B7823A21E55007BD73D /* WiproProficiencyExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiproProficiencyExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A09B7B23A21E55007BD73D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89A09B7D23A21E55007BD73D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89A09B7F23A21E55007BD73D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89A09B8223A21E55007BD73D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89A09B8423A21E5A007BD73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				89A09B7B23A21E55007BD73D /* AppDelegate.swift */,
-				89A09B7D23A21E55007BD73D /* SceneDelegate.swift */,
 				89A09B7F23A21E55007BD73D /* ViewController.swift */,
 				89A09B8123A21E55007BD73D /* Main.storyboard */,
 				89A09B8423A21E5A007BD73D /* Assets.xcassets */,
@@ -202,7 +199,6 @@
 			files = (
 				89A09B8023A21E55007BD73D /* ViewController.swift in Sources */,
 				89A09B7C23A21E55007BD73D /* AppDelegate.swift in Sources */,
-				89A09B7E23A21E55007BD73D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C568LW99BK;
 				INFOPLIST_FILE = WiproProficiencyExercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C568LW99BK;
 				INFOPLIST_FILE = WiproProficiencyExercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
