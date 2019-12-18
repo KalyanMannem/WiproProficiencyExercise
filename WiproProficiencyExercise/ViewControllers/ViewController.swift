@@ -47,7 +47,7 @@ class ViewController: UIViewController
         tableView.backgroundColor = .white
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
         if #available(iOS 13.0, *){
             self.view.backgroundColor = .systemBackground
             self.tableView.backgroundColor = .systemBackground

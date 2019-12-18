@@ -30,7 +30,7 @@ extension UIViewController
         loadingView.backgroundColor = .red
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loadingView)
-        let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         activityIndicator.startAnimating()
         activityIndicator.color = UIColor.white
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
