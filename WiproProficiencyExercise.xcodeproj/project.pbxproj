@@ -528,17 +528,18 @@
 			baseConfigurationReference = 0C95DF8EECC7192961788464 /* Pods-WiproProficiencyExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development: Kalyan Mannem (GM65UY89J6)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C568LW99BK;
 				INFOPLIST_FILE = WiproProficiencyExercise/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.development.practice.WiproProficiencyExercise;
+				PRODUCT_BUNDLE_IDENTIFIER = app.development.practice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Apps Development Practice Purpose";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,17 +550,18 @@
 			baseConfigurationReference = DC335F69421003074B6B436A /* Pods-WiproProficiencyExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development: Kalyan Mannem (GM65UY89J6)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C568LW99BK;
 				INFOPLIST_FILE = WiproProficiencyExercise/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.development.practice.WiproProficiencyExercise;
+				PRODUCT_BUNDLE_IDENTIFIER = app.development.practice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Apps Development Practice Purpose";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -571,7 +573,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C568LW99BK;
 				INFOPLIST_FILE = WiproProficiencyExerciseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -582,6 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.development.practice.WiproProficiencyExerciseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiproProficiencyExercise.app/WiproProficiencyExercise";
@@ -594,7 +598,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C568LW99BK;
 				INFOPLIST_FILE = WiproProficiencyExerciseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -605,6 +609,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.development.practice.WiproProficiencyExerciseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiproProficiencyExercise.app/WiproProficiencyExercise";
