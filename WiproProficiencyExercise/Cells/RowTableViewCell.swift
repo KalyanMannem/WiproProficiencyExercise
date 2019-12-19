@@ -11,6 +11,8 @@ import UIKit
 import Kingfisher
 
 class RowTableViewCell: UITableViewCell{
+    private let placeholder = "placeholder"
+    private let stackViewSpacing: CGFloat = 10.0
     var item : Row? {
         didSet {
             rowTitleLabel.text = item?.title
@@ -19,7 +21,7 @@ class RowTableViewCell: UITableViewCell{
                 rowImage.kf.indicatorType = .activity
                 rowImage.kf.setImage(
                     with: imageUrl,
-                    placeholder: UIImage(named: "placeholder"),
+                    placeholder: UIImage(named: placeholder),
                     options: [
                         .scaleFactor(UIScreen.main.scale),
                         .transition(.fade(1)),
@@ -32,54 +34,37 @@ class RowTableViewCell: UITableViewCell{
     }
     
     private let rowTitleLabel: UILabel = {
-        let lbl = UILabel()
-        if #available(iOS 13.0, *) {
-            lbl.textColor = .label
-        } else {
-            // Fallback on earlier versions
-            lbl.textColor = .darkText
-            
-        }
-        lbl.font = UIFont.preferredFont(forTextStyle: .headline)
-        lbl.textAlignment = .left
-        return lbl
+        let label = UILabel()
+        label.textColor = .darkText
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.textAlignment = .left
+        return label
     }()
     
     
     private let rowDescriptionLabel: UILabel = {
-        let lbl = UILabel()
-        if #available(iOS 13.0, *){
-            lbl.textColor = .label
-        }else{
-            // Fallback on earlier versions
-            lbl.textColor = .darkText
-        }
-        lbl.font = UIFont.preferredFont(forTextStyle: .body)
-        lbl.textAlignment = .left
-        lbl.numberOfLines = 0
-        return lbl
+        let label = UILabel()
+        label.textColor = .darkText
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        return label
     }()
     
     private let rowImage: ScaleAspectFitImageView = {
-        let imgView = ScaleAspectFitImageView()
-        imgView.contentMode = .scaleAspectFill
-        imgView.clipsToBounds = true
-        return imgView
+        let imageView = ScaleAspectFitImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
-        if #available(iOS 13.0, *){
-            self.backgroundColor = .systemBackground
-        }else{
-            // Fallback on earlier versions
-            self.backgroundColor = .white
-        }
         let stackView = UIStackView(arrangedSubviews: [rowImage, rowTitleLabel, rowDescriptionLabel])
         stackView.distribution = .fill
         stackView.axis = .vertical
-        stackView.spacing = 10
+        stackView.spacing = stackViewSpacing
         contentView.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true

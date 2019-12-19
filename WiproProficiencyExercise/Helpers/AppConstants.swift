@@ -7,12 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct AppConstants{
     static let SERVICE_URL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
-}
-
-struct ErrorMessage{
-    static let noInternet = "No internet connection"
+    static let LOADING_CORNER_RADIUS: CGFloat = 10.0
 }
 

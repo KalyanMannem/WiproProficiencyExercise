@@ -26,7 +26,7 @@ extension UIViewController
     func startLoading(){
         let loadingView = UIView()
         loadingView.tag = 999
-        loadingView.layer.cornerRadius = 10.0
+        loadingView.layer.cornerRadius = AppConstants.LOADING_CORNER_RADIUS
         loadingView.backgroundColor = .red
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loadingView)

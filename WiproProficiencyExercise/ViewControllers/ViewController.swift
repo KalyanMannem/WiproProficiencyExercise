@@ -13,6 +13,7 @@ class ViewController: UIViewController
     let tableView = UITableView()
     private var results: [Row] = []
     private let canadaViewModel = CanadaViewModel()
+    private let cellIdentifier = "ItemCell"
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -39,7 +40,7 @@ class ViewController: UIViewController
         tableView.leftAnchor.constraint(equalTo: safeGuide.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: safeGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: safeGuide.rightAnchor).isActive = true
-        tableView.register(RowTableViewCell.self, forCellReuseIdentifier: "ItemCell")
+        tableView.register(RowTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.addSubview(self.refreshControl)
     }
     
@@ -48,14 +49,6 @@ class ViewController: UIViewController
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
-        if #available(iOS 13.0, *){
-            self.view.backgroundColor = .systemBackground
-            self.tableView.backgroundColor = .systemBackground
-        }
-        else{
-            // Fallback on earlier versions
-            self.view.backgroundColor = .white
-        }
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl){
@@ -110,7 +103,7 @@ extension ViewController: UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! RowTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RowTableViewCell
         cell.item = results[indexPath.row]
         return cell
     }
