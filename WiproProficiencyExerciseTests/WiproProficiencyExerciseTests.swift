@@ -39,6 +39,21 @@ class WiproProficiencyExerciseTests: XCTestCase {
         }
         self.wait(for: [expectation], timeout: 20)
     }
+    
+    func testJSONMapping() throws {
+        let bundle = Bundle(for: type(of: self))
+        
+        guard let url = bundle.url(forResource: "Wipro", withExtension: "json") else {
+            XCTFail("Missing file: Wipro.json")
+            return
+        }
+        
+        let json = try Data(contentsOf: url)
+        let model: CanadaDataModel = try  JSONDecoder().decode(CanadaDataModel.self, from: json)
+        
+        XCTAssertEqual(model.title, "About Canada")
+        XCTAssertTrue(model.rows.count>0)
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
